@@ -1,18 +1,30 @@
 ﻿using System;
 
-public class Program
+namespace ComparisonProgram
 {
-    public static void Main()
+    class Program
     {
-        int num1 = 5;
-        int num2 = 10;
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите первое число:");
+            int number1 = Convert.ToInt32(Console.ReadLine()); 
 
-        int result = Sum(num1, num2);
-        Console.WriteLine("Сумма чисел " + num1 + " и " + num2 + " равна " + result);
-    }
+            Console.WriteLine("Введите второе число:");
+            int number2 = Convert.ToInt32(Console.ReadLine()); 
 
-    public static int Sum(int a, int b)
-    {
-        return a + b;
+            if (number1 == number2)
+            {
+                Console.WriteLine("Числа равны");
+            }
+            else if (number1 > number2)
+            {
+                Console.WriteLine($"Первое число больше второго числа");
+            }
+            else
+            {
+                Console.WriteLine($"Первое число меньше второго числа");
+            }
+        }
     }
 }
+
